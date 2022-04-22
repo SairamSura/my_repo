@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ContactController {
+	int x =20;
 	
 	@GetMapping(value="/api/contact/v1",produces = MediaType.APPLICATION_JSON_VALUE)
 	public Contact getContact() {
@@ -14,6 +15,7 @@ public class ContactController {
 	
 	@GetMapping(value="/api/contact/v2",produces = MediaType.APPLICATION_JSON_VALUE)
 	public Contactv2 getContact2() {
+		System.out.println("Hello...");
 		return new Contactv2("Tom",12435);
 	}
 	
